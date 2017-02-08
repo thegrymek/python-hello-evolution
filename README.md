@@ -34,6 +34,22 @@ Generation | Fitness | Phenotype
         15 |     0.0 | Hello-Evolution
 ```
 
+How it works?
+
+It uses evolution algorithm to solve desired string.
+
+In short it generates about 10 000 random strings (as population). These strings
+are filtered by fitness method to 20% of all population.
+
+Fitness method checks how close string is close to desired string.
+
+Crossover mixes randomly string and fill the population of new the string.
+Crossover method is repeated until population length will get initial length.
+
+Mutation does a little change in string for example changes random character.
+
+These steps are repeated until we get desired string.
+
 To run test type
 ```bash
 py.test tests.py

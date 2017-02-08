@@ -19,8 +19,8 @@ def random_character():
 
 def fitness(child, target_string):
     diff = [
-        math.fabs(ord(child[i]) - ord(target_string[i]))
-        for i in range(len(child))
+        math.fabs(ord(c) - ord(s))
+        for c, s in zip(child, target_string)
     ]
     return sum(diff)
 
