@@ -18,17 +18,16 @@ def random_character():
 
 
 def fitness(child, target_string):
-    diff = [
+    characters_distance = [
         math.fabs(ord(c) - ord(s))
         for c, s in zip(child, target_string)
     ]
-    return sum(diff)
+    return sum(characters_distance)
 
 
 def create_child(length):
-    random_string_iterable = [random_character()
-                              for _ in range(length)]
-    random_string = ''.join(random_string_iterable)
+    random_characters = [random_character() for _ in range(length)]
+    random_string = ''.join(random_characters)
     return random_string
 
 
@@ -51,8 +50,8 @@ def mutation(child, pos):
 
 
 def run(target_string, population_length):
-    fitness_func = functools.partial(fitness, target_string=target_string)
     child_length = len(target_string)
+    fitness_func = functools.partial(fitness, target_string=target_string)
     population = create_population(population_length, child_length)
 
     best = population[0]
