@@ -106,10 +106,10 @@ if __name__ == '__main__':
     parser.add_argument('-n',
                         dest='population_length',
                         default=10000,
-                        help='population lenght')
+                        help='population 1lenght')
     parser.add_argument('--target', '-t',
                         dest='target_string',
-                        default='HelloEvolution',
+                        default='Hello-Evolution',
                         help='String, that you are looking for')
 
     args = parser.parse_args()

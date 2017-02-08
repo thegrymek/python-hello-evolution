@@ -7,9 +7,11 @@ python hello.py
 
 To run with custom parameters
 ```bash
-python hello.py -t MyHelloString -p 10000
+python hello.py -t MyHelloString -p 100
 ```
-where `-p` is number of population (default is 10000) and `-t` is looked string.
+where
+- `-p` is number of population (default is 10000)
+- `-t` is looked string (default `Hello-Evolution`)
 
 Sample output
 ```
